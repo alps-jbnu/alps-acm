@@ -69,7 +69,8 @@ body {
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  margin-left: -920px;
   min-width: 1840px;
   height: 500px;
 }
@@ -166,5 +167,11 @@ body {
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 16px;
   }
 }
