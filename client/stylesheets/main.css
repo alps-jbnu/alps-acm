@@ -5,7 +5,7 @@
     font-family: 'NanumGothic';
     font-style: normal;
     font-weight: normal;
-    src: local('NanumGothic'),local('나눔고딕'),url('http://commondatastorage.googleapis.com/fontfacekr-fonts/NanumGothic.woff') format('woff');
+    src: local('NanumGothic'),local('나눔고딕'),url('/fonts/NanumGothic.woff') format('woff');
 }
 
 /* Padding below the footer and lighter body text */
