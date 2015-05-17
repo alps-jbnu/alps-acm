@@ -1,11 +1,19 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
+/* Load specity fonts on web or local and using as font-family */
+@font-face {
+    font-family: 'NanumGothic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NanumGothic'),local('나눔고딕'),url('http://commondatastorage.googleapis.com/fontfacekr-fonts/NanumGothic.woff') format('woff');
+}
+
 /* Padding below the footer and lighter body text */
 
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
-  font-family: "NanumBarunGothic","NBG",Dotum,AppleGothic,sans-serif;
+  font-family: "NanumGothic","NanumBarunGothic","NBG","MalgunGothic","맑은 고딕",Dotum,AppleGothic,sans-serif;
 }
 
 
