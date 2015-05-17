@@ -15,6 +15,14 @@ Template.main.onRendered(function() {
     $(window).resize(renderNavbar);
 
     document.title = '전북대학교 컴퓨터공학부 프로그래밍 경진대회';
+    
+    google.load( "webfont", "1" );
+    google.setOnLoadCallback(function() {
+        WebFont.load({ custom: {
+            families: [ "NanumGothic" ],
+            urls: [ "http://fontface.kr/NanumGothic/css" ]
+        }});
+    });
 });
 
 Template.main.events({
