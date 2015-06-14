@@ -1,5 +1,5 @@
-var DEFAULT_IMAGE_LIMIT = 9;
-var MAX_IMAGE_LIMIT = 20;
+var DEFAULT_IMAGE_LIMIT = 6
+var MAX_IMAGE_LIMIT = 97;
 
 Template.main.onCreated(function() {
     this.imgLimit = new ReactiveVar();
@@ -116,8 +116,8 @@ Template.main.helpers({
         var imgLimit = Template.instance().imgLimit.get();
 
         var ret = [];
-        for (var i = 0; i < imgLimit; i++)
-            ret.push({src: 'http://placehold.it/450x300'});
+        for (var i = 1; i <= imgLimit; i++)
+            ret.push({src: "/images/contest_2015/THUMBNAIL_" + i.toString() + ".JPG"});
         return ret;
     },
     hasMoreImages: function() {
