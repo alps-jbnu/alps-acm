@@ -1,3 +1,11 @@
+var DEFAULT_IMAGE_LIMIT = 9;
+var MAX_IMAGE_LIMIT = 20;
+
+Template.main.onCreated(function() {
+    this.imgLimit = new ReactiveVar();
+    this.imgLimit.set(DEFAULT_IMAGE_LIMIT);
+});
+
 Template.main.onRendered(function() {
     var nav = $('nav');
     var navBottom = nav.offset().top + nav.height();
@@ -72,6 +80,12 @@ Template.main.events({
                 alert('접수되었습니다. 감사합니다.')
             }
         });
+    },
+    'click button.unfold-gallery': function(e) {
+        Template.instance().imgLimit.set(MAX_IMAGE_LIMIT);
+    },
+    'click button.fold-gallery': function(e) {
+        Template.instance().imgLimit.set(DEFAULT_IMAGE_LIMIT);
     }
 });
 
@@ -97,5 +111,21 @@ Template.main.helpers({
         } else {
             return null;
         }
+    },
+    images: function() {
+        var imgLimit = Template.instance().imgLimit.get();
+
+        var ret = [];
+        for (var i = 0; i < imgLimit; i++)
+            ret.push({src: 'http://placehold.it/450x300'});
+        return ret;
+    },
+    hasMoreImages: function() {
+        var imgLimit = Template.instance().imgLimit.get();
+
+        if (imgLimit < MAX_IMAGE_LIMIT)
+            return true;
+        else
+            return false;
     }
 });
