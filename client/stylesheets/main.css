@@ -128,10 +128,25 @@ body {
 }
 
 
-/* Featurettes
+/* Images
 ------------------------- */
+
 .thumb {
   margin-bottom: 30px;
+}
+
+#imgModal .modal-body {
+  padding: 4px;
+}
+
+#imgModal .modal-body button.close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+#imgModal img {
+  width: 100%;
 }
 
 

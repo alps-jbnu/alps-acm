@@ -4,6 +4,8 @@ var MAX_IMAGE_LIMIT = 97;
 Template.main.onCreated(function() {
     this.imgLimit = new ReactiveVar();
     this.imgLimit.set(DEFAULT_IMAGE_LIMIT);
+
+    this.selectedImgNum = new ReactiveVar();
 });
 
 Template.main.onRendered(function() {
@@ -86,6 +88,14 @@ Template.main.events({
     },
     'click button.fold-gallery': function(e) {
         Template.instance().imgLimit.set(DEFAULT_IMAGE_LIMIT);
+    },
+    'click #photos img': function(e) {
+        var id = $(e.target).attr('id');
+        var num = /[0-9]+/.exec(id);
+        if (num) {
+            num = parseInt(num[0]);
+            Template.instance().selectedImgNum.set(num);
+        }
     }
 });
 
@@ -117,7 +127,10 @@ Template.main.helpers({
 
         var ret = [];
         for (var i = 1; i <= imgLimit; i++)
-            ret.push({src: "/images/contest_2015/THUMBNAIL_" + i.toString() + ".JPG"});
+            ret.push({
+                src: "/images/contest_2015/THUMBNAIL_" + i.toString() + ".JPG",
+                num: i
+            });
         return ret;
     },
     hasMoreImages: function() {
@@ -127,5 +140,8 @@ Template.main.helpers({
             return true;
         else
             return false;
+    },
+    imgNum: function() {
+        return Template.instance().selectedImgNum.get();
     }
 });
