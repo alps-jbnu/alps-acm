@@ -11,3 +11,4 @@ underscore
 iron:router
 accounts-base
 accounts-password
+reactive-var
