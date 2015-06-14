@@ -70,8 +70,8 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  margin-left: -920px;
-  min-width: 1840px;
+  margin-left: -960px;
+  min-width: 1920px;
   height: 500px;
 }
 
