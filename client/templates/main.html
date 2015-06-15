@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav">
               <li><a class="goto" href="#about">대회 소개</a></li>
               <li><a class="goto" href="#apply">대회 신청</a></li>
-              <li><a class="goto" href="#teams">참가팀 목록</a></li>
+              <li><a class="goto" href="#standings">순위표</a></li>
               <li><a class="goto" href="#photos">대회 사진</a></li>
               <li><a class="goto" href="#contact">문의</a></li>
             </ul>
@@ -196,31 +196,157 @@
 
     <hr class="featurette-divider">
 
-    <div id="teams" class="row featurette text-center">
-      <div class="col-md-12">
-        <h2 class="small-margin-heading featurette-heading">참가팀 목록</h2>
+    <div id="standings" class="row text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="small-margin-heading featurette-heading">순위표</h2>
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <th>팀명</th>
-              <th>팀 대표</th>
-              <th>팀원</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each teams}}
-              {{> team}}
-            {{/each}}
-            {{#each blankTeams}}
-              {{> blankTeam}}
-            {{/each}}
-          </tbody>
-        </table>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="text-center">순위</th>
+                <th class="text-center">팀명</th>
+                <th class="text-center">팀 대표</th>
+                <th class="text-center">해결한 문제 수</th>
+                <th class="text-center">페널티</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="info">
+                <td>1</td>
+                <td>1등</td>
+                <td>김경재</td>
+                <td>6</td>
+                <td>288</td>
+              </tr>
+              <tr class="info">
+                <td>2</td>
+                <td>Linus_Torvalds</td>
+                <td>오창식</td>
+                <td>5</td>
+                <td>553</td>
+              </tr>
+              <tr class="info">
+                <td>3</td>
+                <td>DDF</td>
+                <td>유원종</td>
+                <td>4</td>
+                <td>288</td>
+              </tr>
+              <tr class="info">
+                <td>4</td>
+                <td>하늘보리</td>
+                <td>정재용</td>
+                <td>4</td>
+                <td>360</td>
+              </tr>
+              <tr class="info">
+                <td>5</td>
+                <td>불도저3rd</td>
+                <td>김용현</td>
+                <td>3</td>
+                <td>59</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>각도기</td>
+                <td>고태호</td>
+                <td>3</td>
+                <td>123</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>옛촌</td>
+                <td>문예총</td>
+                <td>3</td>
+                <td>127</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>김창영우릴버려?</td>
+                <td>정승균</td>
+                <td>3</td>
+                <td>131</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>멘토스</td>
+                <td>김희연</td>
+                <td>3</td>
+                <td>135</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>1번</td>
+                <td>이현준</td>
+                <td>3</td>
+                <td>168</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>삐삐빅</td>
+                <td>유동윤</td>
+                <td>3</td>
+                <td>264</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>분리수거</td>
+                <td>이재열</td>
+                <td>2</td>
+                <td>31</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>덥조</td>
+                <td>박세희</td>
+                <td>2</td>
+                <td>46</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>나도 배울래</td>
+                <td>임가연</td>
+                <td>2</td>
+                <td>48</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>시조새</td>
+                <td>윤주미</td>
+                <td>2</td>
+                <td>51</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>배우러왔어요2</td>
+                <td>조건희</td>
+                <td>2</td>
+                <td>85</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>배우러왔음</td>
+                <td>형태희</td>
+                <td>2</td>
+                <td>102</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-left">
+            <p>
+              <i class="glyphicon glyphicon-info-sign"></i>
+              <b>해결한 문제</b>가 많고 <b>패널티</b>가 적을수록 순위가 높습니다.<br>
+              <i class="glyphicon glyphicon-info-sign"></i>
+              문제를 해결할 때마다, 대회 시작부터 경과한 시간(분)이 페널티로 더해집니다.<br>
+              <i class="glyphicon glyphicon-info-sign"></i>
+              문제를 맞을 때까지 시도한 제출 중 <b>오답은 20분의 패널티</b>를 더합니다.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
