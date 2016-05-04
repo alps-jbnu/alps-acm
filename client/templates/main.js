@@ -48,8 +48,7 @@ Template.main.events({
     },
     'click .under-construction': function(e) {
         e.preventDefault();
-
-        alert('죄송합니다. 아직 준비 중입니다.');
+        Router.go('last');
     },
     'submit #team-apply-form': function(e) {
         e.preventDefault();
