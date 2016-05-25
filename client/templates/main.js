@@ -127,7 +127,7 @@ Template.main.helpers({
         var ret = [];
         for (var i = 1; i <= imgLimit; i++)
             ret.push({
-                src: "/images/contest_2015/THUMBNAIL_" + i.toString() + ".JPG",
+                src: "/images/contest_2016/THUMBNAIL_" + i.toString() + ".jpg",
                 num: i
             });
         return ret;
