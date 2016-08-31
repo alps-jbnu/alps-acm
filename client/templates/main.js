@@ -27,8 +27,8 @@ Template.main.onRendered(function() {
     document.title = '전북대학교 컴퓨터공학부 프로그래밍 경진대회';
 
     var now = new Date();
-    if (now >= dueDate)
-        $('.disable-overdue').attr('disabled', 'true');
+    //if (now >= dueDate)
+        //$('.disable-overdue').attr('disabled', 'true');
 });
 
 Template.main.events({
