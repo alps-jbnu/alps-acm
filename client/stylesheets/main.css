@@ -67,6 +67,7 @@ body {
 .carousel .item {
   height: 500px;
   background-color: #777;
+  overflow: hidden;
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -74,7 +75,7 @@ body {
   left: 50%;
   margin-left: -960px;
   min-width: 1920px;
-  height: 500px;
+  heigth: auto;
 }
 
 
